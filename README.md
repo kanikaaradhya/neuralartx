@@ -12,15 +12,13 @@
 
 Artists — especially emerging ones — face a real problem: gallery exhibitions are expensive, local markets are limited, and most e-commerce platforms aren't designed for original artwork. NeuralArtX is a purpose-built web storefront where artists list work with pricing and discounts, and buyers can register, browse, add items to a cart, pay securely via Razorpay, and leave reviews — all backed by a normalised MySQL database and JWT-based session management.
 
-Built across two semesters (Web Application Development + DBMS) at BMS College of Engineering, 2022–23.
-
 ## My Role
 
 This was a team project. My contributions:
 - Designed and implemented the Node.js backend — REST API routes, MySQL integration, JWT authentication layer, and Razorpay payment flow
 - Built the responsive frontend layout across all sections (product grid, cart interactions, contact form)
 - Designed the relational schema (4 tables, normalised to 3NF) with ER modelling
-- Almost all of the artwork featured on the platform is my own — the project doubled as a real showcase for pieces I'd been painting and illustrating independently
+- Almost all the artwork featured on the platform is my own — the project doubled as a real showcase for pieces I'd been painting and illustrating independently
 
 ## Architecture
 
@@ -90,7 +88,7 @@ Four tables — `users`, `artwork`, `orders`, `cust_query` — designed from an 
 → **[Full database design deep-dive](docs/database-design.md)**
 
 ### Responsive Frontend
-Five main sections (Home, About, Products, Review, Contact) plus user registration, built with vanilla HTML/CSS/JS. Swiper.js carousels adapt from 1 column on mobile to 3 on desktop. A dark/light theme toggle switches the entire UI with a single click. Product cards have hover-triggered action icons (wishlist, add-to-cart, share) that connect to the JWT-protected backend routes.
+Five main sections (Home, About, Products, Review, Contact) plus user registration, built with vanilla HTML/CSS/JS. Swiper.js carousels adapt from 1 column on mobile to 3 on desktop. Product cards have hover-triggered action icons (wishlist, add-to-cart, share) that connect to the JWT-protected backend routes.
 
 → **[Full frontend deep-dive with code](docs/frontend.md)**
 
@@ -100,16 +98,14 @@ Five main sections (Home, About, Products, Review, Contact) plus user registrati
 ![Home Page](screenshots/01-home.png)
 
 ### User Registration
-![Registration](screenshots/10-registration.jpeg)
+![Registration](screenshots/09-registration.jpeg)
 
 ### Product Catalog
 Products with discount badges, pricing, and hover-triggered action icons (wishlist, add-to-cart, share).
 
 ![Products Grid](screenshots/03-products-grid.png)
 
-![Products with Cart](screenshots/13-products-live.jpeg)
-
-![Cart Hover](screenshots/11-cart-hover.jpeg)
+![Products Detail](screenshots/04-products-detail.png)
 
 ### Customer Reviews
 ![Reviews](screenshots/05-reviews.png)
@@ -117,17 +113,15 @@ Products with discount badges, pricing, and hover-triggered action icons (wishli
 ### Contact Form
 Validated contact form (regex checks on name, email, phone, message) that submits to the Node.js backend and persists in MySQL.
 
-![Contact Form](screenshots/06-contact-form.png)
-
-![Contact Form — Live](screenshots/12-contact-live.jpeg)
+![Contact Form — Filled](screenshots/06-contact-filled.png)
 
 ### Database
 `SELECT * FROM custquery` output showing entries persisted in the `project` database.
 
-![Database](screenshots/08-database.png)
+![Database](screenshots/07-database.png)
 
 ### Footer
-![Footer](screenshots/09-footer.png)
+![Footer](screenshots/08-footer.png)
 
 ## Tech Stack
 
@@ -147,6 +141,6 @@ Validated contact form (regex checks on name, email, phone, message) that submit
 | **[Database Design](docs/database-design.md)** | ER diagram, relational schema, 1NF → 3NF normalisation, SQL DDL |
 | **[JWT Authentication](docs/jwt-auth.md)** | Registration, login, token signing, middleware, frontend token handling |
 | **[Payment Integration](docs/payment-integration.md)** | Razorpay order creation, checkout flow, order recording |
-| **[Frontend](docs/frontend.md)** | Responsive layout, Swiper carousels, theme toggle, form validation, product cards |
+| **[Frontend](docs/frontend.md)** | Responsive layout, Swiper carousels, form validation, product cards |
 
 Built for the Web Application Development (21IS3PCWAD) and DBMS courses, Dept. of ISE, BMS College of Engineering, 2022–23.
