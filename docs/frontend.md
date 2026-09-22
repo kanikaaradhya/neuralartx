@@ -72,24 +72,6 @@ var swiper = new Swiper(".product-slider", {
 
 **Why `disableOnInteraction: false`:** by default, Swiper stops autoplaying once a user swipes manually. Setting this to `false` means the carousel resumes autoplay after the user stops interacting — better for a storefront where you want continuous product visibility.
 
-The CSS defines all theme-dependent colours on `body` and overrides them on `body.active`:
-
-```css
-body {
-    --bg: #fff;
-    --text: #333;
-    --card-bg: #f7f7f7;
-}
-
-body.active {
-    --bg: #1a1a2e;
-    --text: #eee;
-    --card-bg: #16213e;
-}
-```
-
-Every element references these variables — `background: var(--bg)`, `color: var(--text)` — so a single class toggle repaints the entire page.
-
 ## Product Cards
 
 Each product card is a self-contained `.box` element with three interactive overlays on hover:
@@ -185,14 +167,13 @@ window.onscroll = () => {
 
 ### Product Grid with Hover Actions
 ![Products](../screenshots/03-products-grid.png)
-![Cart Interaction](../screenshots/11-cart-hover.jpeg)
+![Products Detail](../screenshots/04-products-detail.png)
 
 ### Contact Form
-![Contact](../screenshots/06-contact-form.png)
-![Contact — Live](../screenshots/12-contact-live.jpeg)
+![Contact — Filled](../screenshots/06-contact-filled.png)
 
 ### Footer
-![Footer](../screenshots/09-footer.png)
+![Footer](../screenshots/08-footer.png)
 
 ---
 
